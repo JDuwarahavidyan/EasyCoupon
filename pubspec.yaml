@@ -39,6 +39,9 @@ dependencies:
   slide_to_act: ^2.0.2
   qr_code_scanner: ^1.0.1
   firebase_core: ^3.1.0
+  bloc: ^8.1.4
+  firebase_auth: ^5.1.0
+  flutter_bloc: ^8.1.6
 
 dev_dependencies:
   flutter_test:

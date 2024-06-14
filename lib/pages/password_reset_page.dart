@@ -90,7 +90,7 @@ class PasswordResetPage extends StatelessWidget {
 
 
 
-                        
+                        Navigator.pushReplacementNamed(context, '/login');
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFFFFC129), // Yellow color
