@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "666773139798",
+    "project_id": "easycoupon-3302c",
+    "storage_bucket": "easycoupon-3302c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666773139798:android:4854332213620639af26f7",
+        "android_client_info": {
+          "package_name": "com.example.easy_coupon_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOyhZ1PXC1Jo5_l-bh4NHCpoE0NMQ8twQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666773139798:android:01900835a75a2936af26f7",
+        "android_client_info": {
+          "package_name": "com.example.easycoupon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOyhZ1PXC1Jo5_l-bh4NHCpoE0NMQ8twQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

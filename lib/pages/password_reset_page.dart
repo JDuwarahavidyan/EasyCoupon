@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class PasswordResetPage extends StatelessWidget {
+  const PasswordResetPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class LoginPage extends StatelessWidget {
                     // "Log in to Easy Coupon" text
                     
                     const Text(
-                      'Log in to Easy Coupon',
+                      'Reset Your Password',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 15.0,
@@ -47,7 +47,7 @@ class LoginPage extends StatelessWidget {
                     // Username TextField
                     TextField(
                       decoration: InputDecoration(
-                        hintText: 'Username',
+                        hintText: 'New Password',
                         hintStyle: const TextStyle(
                            color: Color.fromARGB(255, 158, 154, 154),
                         ),
@@ -67,7 +67,7 @@ class LoginPage extends StatelessWidget {
                     TextField(
                       obscureText: true,
                       decoration: InputDecoration(
-                        hintText: 'Password',
+                        hintText: 'Confirm Password',
                         hintStyle: const TextStyle(
                           color:Color.fromARGB(255, 158, 154, 154),
                         ),
@@ -90,19 +90,19 @@ class LoginPage extends StatelessWidget {
 
 
 
-                        Navigator.pushReplacementNamed(context, '/student');
+                        
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFFFFC129), // Yellow color
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
                         ),
-                        padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 125.0),
+                        padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 100),
                          elevation: 10, // Add shadow to the button
                         shadowColor: Colors.black, // Shadow color
                       ),
                       child: const Text(
-                        'LOGIN',
+                        'Set Password',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -112,23 +112,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 10.0),
                     // Forget Password
-                    TextButton(
-                      onPressed: () {
-
-
-                        // Handle forget password action
-
-
-                       
-                        Navigator.pushReplacementNamed(context, '/reset');
-                      },
-                      child: const Text(
-                        'Forget Password?',
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
+                    
                   ],
                 ),
               ),
