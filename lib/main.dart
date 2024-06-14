@@ -8,7 +8,7 @@ import 'pages/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'bloc/auth/auth_bloc.dart';
-
+import 'pages/canteen_page.dart';
 
 
 
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
           '/get-started': (context) => const GetStarted(),
           '/login': (context) => LoginPage(),
           '/student': (context) => const StudentPage(),
-          '/reset': (context) => const PasswordResetPage(),
+          '/reset': (context) => const CanteenPage(),
         },
       ),
     );
