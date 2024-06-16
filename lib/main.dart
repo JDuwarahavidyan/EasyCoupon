@@ -1,5 +1,5 @@
 import 'package:easy_coupon/pages/password_reset_page.dart';
-import 'package:easy_coupon/pages/student_page.dart';
+import 'package:easy_coupon/pages/student_page_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'pages/splash_screen.dart';
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         BlocProvider<AuthBloc>(
           create: (context) => AuthBloc(),
         ),
-        // Add other providers if necessary
+       
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/get-started': (context) => const GetStarted(),
           '/login': (context) => LoginPage(),
-          '/student': (context) => const StudentPage(),
+          '/student': (context) =>  StudentPage(),
           '/reset': (context) => const CanteenPage(),
         },
       ),

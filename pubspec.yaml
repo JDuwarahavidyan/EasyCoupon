@@ -43,6 +43,8 @@ dependencies:
   firebase_auth: ^5.1.0
   flutter_bloc: ^8.1.6
   qr_flutter: ^4.1.0
+  flutter_spinbox: ^0.13.1
+  
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +72,7 @@ flutter:
   assets:
     - assets/nn.jpg
     - assets/logo.png
+    - assets/1234.jpg
 
     # - assets/background_image.jpeg
     

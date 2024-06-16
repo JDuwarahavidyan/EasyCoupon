@@ -57,6 +57,7 @@ class _StudentPageState extends State<StudentPage> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
+                  
                   result.toString(),
                   style: const TextStyle(
                     fontSize: 150,
@@ -97,8 +98,8 @@ class _StudentPageState extends State<StudentPage> {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black,
-                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.white,
+                    foregroundColor: Colors.black,
                     minimumSize: const Size(290, 50),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class QRScannerPage extends StatefulWidget {
- 
   final Function(String) onScan;
   const QRScannerPage(this.onScan);
 
@@ -11,7 +10,7 @@ class QRScannerPage extends StatefulWidget {
 }
 
 class _QRScannerPageState extends State<QRScannerPage> {
-  late QRViewController controller;
+  QRViewController? controller;
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
 
   @override
@@ -20,9 +19,29 @@ class _QRScannerPageState extends State<QRScannerPage> {
       appBar: AppBar(
         title: const Text("Scan QR Code"),
       ),
-      body: QRView(
-        key: qrKey,
-        onQRViewCreated: _onQRViewCreated,
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 5,
+            child: QRView(
+              key: qrKey,
+              onQRViewCreated: _onQRViewCreated,
+              overlay: QrScannerOverlayShape(
+                borderColor: Colors.red,
+                borderRadius: 10,
+                borderLength: 30,
+                borderWidth: 10,
+                cutOutSize: 300,
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Center(
+              child: Text('Place the QR code within the scan area'),
+            ),
+          )
+        ],
       ),
     );
   }
@@ -34,17 +53,21 @@ class _QRScannerPageState extends State<QRScannerPage> {
 
     controller.scannedDataStream.listen((scanData) {
       if (scanData.code != null) {
-        widget.onScan(scanData.code!); // Use ! to assert non-nullability
+        print('QR Code found: ${scanData.code}');
+        widget.onScan(scanData.code!);
+        controller.pauseCamera(); // Pause the camera after a successful scan
         Navigator.pop(context); // Close the QR scanner page after successful scan
       } else {
         print("No QR code data received");
       }
+    }).onError((error) {
+      print("Error scanning QR code: $error");
     });
   }
 
   @override
   void dispose() {
-    controller.dispose();
+    controller?.dispose();
     super.dispose();
   }
 }
